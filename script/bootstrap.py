@@ -48,10 +48,15 @@ def print_progress(func):
 @print_progress
 def clean_repository():
     """Removing python_template and tests folder"""
-    subprocess.run(
-        ["rm", "-rf", "tests", "python_template", "python-template"],
-        stdout=subprocess.DEVNULL,
-    )
+    shutil.rmtree("tests", onerror=ignore_absent_file)
+    shutil.rmtree("python_template", onerror=ignore_absent_file)
+
+
+def ignore_absent_file(func, path, exc_inf):
+    except_instance = exc_inf[1]
+    if isinstance(except_instance, FileNotFoundError):
+        return
+    raise except_instance
 
 
 @print_progress
