@@ -14,12 +14,12 @@ Template for python-based repositories.
 3. cd hello-world-cli
 4. ./script/bootstrap
 5. Using pyenv and poetry
-    a. pyenv install <version>
-    b. pyenv global <version>
-    c. pip install poetry
-    d. poetry add requests mypy
-    e. poetry add --group lint flake8 black isort **mypy**
-    f. poetry run pytest
-    g. poetry run mypy hello_world_cli/main.py
-    h. poetry run flake8 hello_world_cli/cli.py
-    i. poetry run black hello_world_cli/cli.py
+    1. pyenv install <version>
+    2. pyenv global <version>
+    3. pip install poetry
+    4. poetry add requests mypy
+    5. poetry add --group lint flake8 black isort **mypy**
+    6. poetry run pytest
+    7. poetry run mypy hello_world_cli/main.py
+    8. poetry run flake8 hello_world_cli/cli.py
+    9. poetry run black hello_world_cli/cli.py
