@@ -11,7 +11,7 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-      - uses: amort42/actions-python/lint
+      - uses: amort42/actions-python/lint@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -19,7 +19,7 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
-      - uses: amort42/actions-python/test
+      - uses: amort42/actions-python/test@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           test-flags: --version
@@ -32,7 +32,7 @@ jobs:
       new-release-published: ${{ steps.release.outputs.new-release-published }}
       new-release-version: ${{ steps.release.outputs.new-release-version }}
     steps:
-      - uses: amort42/actions-python/release
+      - uses: amort42/actions-python/release@main
         id: release
         with:
           github-token: ${{ secrets.ADMIN_TOKEN || secrets.GITHUB_TOKEN }}
