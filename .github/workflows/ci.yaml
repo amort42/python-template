@@ -19,4 +19,4 @@ jobs:
       - uses: amort42/actions-python/test@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          test-flags: --version
+
