@@ -16,7 +16,7 @@ Template for python-based repositories.
 3. cd hello-world-cli
 4. ./script/bootstrap
 5. Using pyenv and poetry
-   1. pyenv install <version>
+   1. pyenv install <version> pre 3.12 to prevent dependency error
    2. pyenv global <version>
    3. pip install poetry
    4. poetry add requests mypy
