@@ -26,3 +26,5 @@ Template for python-based repositories.
    8. poetry run flake8 hello_world_cli/cli.py
    9. poetry run black hello_world_cli/cli.py
    10. pre-commit run --all-files
+
+When the github action runs, it uses an automatically generated token named GITHUB_TOKEN as the access to run the actions required. In order for it to do so, we need to allow the automatically generated token to have write permission. So, in the Settings, go to Actions > General, and scroll down to the Workflow permissions section, and select the Read and write permissions radio button. Don’t forget to click the save button.
