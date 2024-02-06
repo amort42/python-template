@@ -25,3 +25,4 @@ Template for python-based repositories.
    7. poetry run mypy hello_world_cli/main.py
    8. poetry run flake8 hello_world_cli/cli.py
    9. poetry run black hello_world_cli/cli.py
+   10. pre-commit run --all-files
